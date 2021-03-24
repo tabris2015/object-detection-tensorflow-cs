@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  train-gpu:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+    - ~/tensorflow_datasets:/root/tensorflow_datasets 
+    - ./:/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+              - gpu
