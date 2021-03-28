@@ -6,7 +6,7 @@ services:
       - "8888:8888"
     volumes:
     - ~/tensorflow_datasets:/root/tensorflow_datasets 
-    - ./:/app
+    # - ./:/app
     deploy:
       resources:
         reservations:
